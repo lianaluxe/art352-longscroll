@@ -1,0 +1,62 @@
+body {
+  padding: 20px;
+  text-align: center;
+  background: url('img/background.png');
+}
+
+.vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 200px 150px rgba(0,0,0,0.9) inset;
+}
+
+.container {
+  font-size: 15em;
+  min-height: 110vh;
+}
+
+.cnc {
+  width: 1em;
+  margin: auto;
+  height: 1em;
+  background:  url('http://bennet.org/images/codepen/cnc-sprite-demo.png') no-repeat 0 0%;
+  background-size: 100%;
+}
+
+#one {
+  position: fixed;
+  left: 40%;
+  margin: auto;
+  width: 1em;
+  height: 1em;
+  background:  url('http://bennet.org/images/codepen/cnc-sprite-demo.png') no-repeat 0 0%;
+  background-size: 100%;
+}
+
+.scrolling #one {
+  animation: sprite 2s steps(31) infinite;
+}
+
+h1 {
+  font-size: 1.2em;
+}
+
+p {
+  width: 60%;
+  margin: auto;
+  text-align: left;
+}
+
+.p {
+  margin-top: 120px;
+  font-size: 14px;
+  text-align: center;
+}
+
+@keyframes sprite {
+  from { background-position: 0 0%; }
+  to { background-position: 0 100%; }
+}
