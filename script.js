@@ -13,23 +13,41 @@ setInterval(function() {
 // initialise ScrollMagic controller
 var controller = new ScrollMagic.Controller();
 
-// create Tween
-var tween = TweenMax.to("#js-animation", 2.0, {
+// CNC
+var tween = TweenMax.to(".cnc", 2.0, {
 	backgroundPosition: "0 100%",
 	ease: SteppedEase.config(31)
 })
 
 // build scene
-var scene = new ScrollMagic.Scene({triggerElement: "#js-animation"})
-	.triggerHook("onLeave")
+var cnc = new ScrollMagic.Scene({triggerElement: "#js-pinned", duration: 400})
 	.setTween(tween)
 	.addTo(controller);
 
 
 
-///triggering CSS animation
-var scene = new ScrollMagic.Scene({triggerElement: "#trigger1"})
-					// trigger animation by adding a css class
-					.setClassToggle("#animate1", "zap")
-					.addIndicators({name: "1 - add a class"}) // add indicators (requires plugin)
-					.addTo(controller);
+///triggering CSS animations
+var lightsOn = new ScrollMagic.Scene({
+							triggerElement: "#lamp"
+						})
+						.setTween(".blackout", 0.1, {opacity: 0}) // trigger a TweenMax.to tween
+						.addTo(controller);
+
+
+var aliceshow = new ScrollMagic.Scene({
+								triggerElement: "#alicetrigger"
+							})
+							.setClassToggle("#alice", "show")
+							.addTo(controller);
+
+var p1show = new ScrollMagic.Scene({
+								triggerElement: "#p1", duration: 1000
+							})
+							.setClassToggle("#p1", "show")
+							.addTo(controller);
+
+var lamp = new ScrollMagic.Scene({
+								triggerElement: "#lamp"
+							})
+							.setClassToggle("#lamp", "lampOn")
+							.addTo(controller);

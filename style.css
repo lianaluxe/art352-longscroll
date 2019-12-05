@@ -2,10 +2,14 @@ body {
   padding: 20px;
   text-align: center;
   background: url('img/background.png');
+  height: 100000px;
+  font-family: 'Milonga', cursive;
+  font-size: 16px,
 }
 
 .vignette {
   position: fixed;
+  z-index: -20;
   top: 0;
   left: 0;
   width: 100%;
@@ -13,7 +17,19 @@ body {
   box-shadow: 0 0 200px 150px rgba(0,0,0,0.9) inset;
 }
 
+.blackout {
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+
 .container {
+  position: relative;
+  top: 5000px;
   font-size: 15em;
   min-height: 110vh;
 }
@@ -24,39 +40,109 @@ body {
   height: 1em;
   background:  url('http://bennet.org/images/codepen/cnc-sprite-demo.png') no-repeat 0 0%;
   background-size: 100%;
+  position: relative;
 }
 
-#one {
+#alicetrigger {
+  position: relative;
+  top: 800px;
+}
+
+#alice {
+  width: 225px;
+  height: 400px;
+  top: 25%;
+  left: 42.5%;
+  background: url(img/alicespritesheet.png) left center;
   position: fixed;
-  left: 40%;
-  margin: auto;
-  width: 1em;
-  height: 1em;
-  background:  url('http://bennet.org/images/codepen/cnc-sprite-demo.png') no-repeat 0 0%;
-  background-size: 100%;
+  z-index: 10;
+  opacity: 0;
+  transition: 0.25s;
 }
 
-.scrolling #one {
-  animation: sprite 2s steps(31) infinite;
+#alice.show {
+  opacity: 1;
+}
+
+.scrolling #alice {
+  animation: falling 1s steps(2) infinite;
+}
+
+#lamp {
+  width: 300px;
+  height: 300px;
+  top: 5000px;
+  left: 25%;
+  background: url(img/lampspritesheet.png) left center;
+  position: relative;
+  z-index: 5;
+}
+
+#lamp.lampOn {
+  animation: lamp .1s steps(1);
+  animation-fill-mode: forwards;
 }
 
 h1 {
-  font-size: 1.2em;
+  font-size: 7em;
+  color: #464646;
+}
+
+h2 {
+  font-size: 10em;
+  color: #464646;
+}
+
+h3 {
+  position: relative;
+  top: -80px;
+  font-size: 2em;
+  color: #464646;
+}
+
+h2#arrow {
+  position: relative;
+  animation: bob 1.5s infinite;
 }
 
 p {
-  width: 60%;
+  font-size: 3em;
+  width: 70%;
   margin: auto;
-  text-align: left;
+  line-height: 1.5em;
+  color: #464646;
 }
 
-.p {
-  margin-top: 120px;
-  font-size: 14px;
-  text-align: center;
+#p1{
+  opacity: 0;
+  transition: 0.5s;
+  position: relative;
+  top: 400px;
+}
+
+#p1.show {
+  opacity: 1;
 }
 
 @keyframes sprite {
   from { background-position: 0 0%; }
   to { background-position: 0 100%; }
+}
+
+@keyframes bob {
+  0% { top: 0px; }
+  50% { top: 30px; }
+  100% { top: 0px; }
+}
+
+@keyframes falling {
+  0% { background-position: 0%; }
+  50% { background-position: 100%; }
+  100% { background-position: 0%; }
+}
+
+@keyframes lamp {
+  0% { background-position: 0%; }
+  50% { background-position: 0%; }
+  100% { background-position: 100%; }
 }
