@@ -27,22 +27,6 @@ body {
   background-color: #000000;
 }
 
-.container {
-  position: relative;
-  top: 5000px;
-  font-size: 15em;
-  min-height: 110vh;
-}
-
-.cnc {
-  width: 1em;
-  margin: auto;
-  height: 1em;
-  background:  url('http://bennet.org/images/codepen/cnc-sprite-demo.png') no-repeat 0 0%;
-  background-size: 100%;
-  position: relative;
-}
-
 #alicetrigger {
   position: relative;
   top: 800px;
@@ -68,6 +52,17 @@ body {
   animation: falling 1s steps(2) infinite;
 }
 
+#cheshire {
+  width: 250px;
+  height: 250px;
+  top: 10000px;
+  left: 15%;
+  background: url(img/cheshiresprites.png) left center;
+  position: relative;
+  z-index: 10;
+  animation: sprite 1s steps(11) infinite;
+}
+
 #lamp {
   width: 300px;
   height: 300px;
@@ -81,6 +76,70 @@ body {
 #lamp.lampOn {
   animation: lamp .1s steps(1);
   animation-fill-mode: forwards;
+}
+
+.b {
+  height: 1000px;
+  top: 7000px;
+  position: relative;
+}
+
+#bookshelf {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+}
+
+.b1 {
+  height: 1000px;
+  top: 5900px;
+  position: relative;
+}
+
+#book1 {
+  position: absolute;
+  left: 500px;
+  width: 150px;
+  height: 150px;
+}
+
+.b2 {
+  height: 1000px;
+  top: 5000px;
+  position: relative;
+}
+
+#book2 {
+  position: absolute;
+  left: 400px;
+  width: 150px;
+  height: 150px;
+}
+
+.b3 {
+  height: 1500px;
+  top: 4400px;
+  position: relative;
+}
+
+#book3 {
+  position: absolute;
+  left: 400px;
+  width: 160px;
+  height: 120px;
+}
+
+.b4 {
+  height: 1000px;
+  top: 2600px;
+  position: relative;
+}
+
+#book4 {
+  position: absolute;
+  left: 500px;
+  width: 120px;
+  height: 160px;
 }
 
 h1 {
@@ -125,8 +184,8 @@ p {
 }
 
 @keyframes sprite {
-  from { background-position: 0 0%; }
-  to { background-position: 0 100%; }
+  from { background-position: 0%; }
+  to { background-position: 100%; }
 }
 
 @keyframes bob {
