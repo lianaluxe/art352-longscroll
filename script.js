@@ -30,11 +30,11 @@ var lightsOn = new ScrollMagic.Scene({
 						.setTween(".blackout", 0.1, {opacity: 0}) // trigger a TweenMax.to tween
 						.addTo(controller);
 
-// var lightsOff = new ScrollMagic.Scene({
-// 							triggerElement: "#bookshelf"
-// 						})
-// 						.setTween(".blackout", 10, {opacity: 1}) // trigger a TweenMax.to tween
-// 						.addTo(controller);
+var lightsOff = new ScrollMagic.Scene({
+							triggerElement: "#p3"
+						})
+						.setTween(".blackout", 3, {opacity: 1}) // trigger a TweenMax.to tween
+						.addTo(controller);
 
 
 var aliceshow = new ScrollMagic.Scene({
@@ -71,6 +71,12 @@ var p3show = new ScrollMagic.Scene({
 								triggerElement: "#p3", duration: 1000
 							})
 							.setClassToggle("#p3", "show")
+							.addTo(controller);
+
+var p4show = new ScrollMagic.Scene({
+								triggerElement: "#cheshire", duration: 4000
+							})
+							.setClassToggle("#p4", "show")
 							.addTo(controller);
 
 var lamp = new ScrollMagic.Scene({
@@ -193,4 +199,48 @@ var tweenCard5 = TweenMax.to("#card5", 2.0, {
 var sceneCard5 = new ScrollMagic.Scene({triggerElement: "#card5", duration: 2000})
 	.setTween(tweenCard5)
 	.setPin("#card5")
+	.addTo(controller);
+
+var tweenTeapot = TweenMax.to("#teapot", 2.0, {
+	rotation: 45,
+	y: 50,
+});
+
+var sceneTeapot = new ScrollMagic.Scene({triggerElement: "#teapot", triggerHook: .3, duration: 2000})
+	.setTween(tweenTeapot)
+	.setPin("#teapot")
+	.addTo(controller);
+
+var tweenTeacup = TweenMax.to("#teacup", 2.0, {
+	y: 50,
+});
+
+var sceneTeacup = new ScrollMagic.Scene({triggerElement: "#teapot", triggerHook: .3, duration: 2000})
+	.setTween(tweenTeacup)
+	.setPin("#teacup")
+	.addTo(controller);
+
+var tweenToast = TweenMax.to("#toast", 2.0, {
+	rotation: 15,
+	x: 20,
+	y: 50,
+});
+
+var sceneToast = new ScrollMagic.Scene({triggerElement: "#toast", triggerHook: .4, duration: 2000})
+	.setTween(tweenToast)
+	.setPin("#toast")
+	.addTo(controller);
+
+var tweenMarmalade = TweenMax.to("#marmalade", 2.0, {
+	rotation: -45,
+	y: 50,
+});
+
+var sceneMarmalade = new ScrollMagic.Scene({triggerElement: "#toast", triggerHook: .4, duration: 2000})
+	.setTween(tweenMarmalade)
+	.setPin("#marmalade")
+	.addTo(controller);
+
+var sceneCheshire = new ScrollMagic.Scene({triggerElement: "#cheshire", triggerHook: .4, duration: 2000})
+	.setPin("#cheshire")
 	.addTo(controller);

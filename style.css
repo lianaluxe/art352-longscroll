@@ -2,7 +2,7 @@ body {
   padding: 20px;
   text-align: center;
   background: url('img/background.png');
-  height: 100000px;
+  height: 33000px;
   font-family: 'Milonga', cursive;
   font-size: 16px,
 }
@@ -56,13 +56,18 @@ body {
   animation: falling 1s steps(2) infinite;
 }
 
+.ch {
+  height: 1000px;
+  top: 8000px;
+  position: relative;
+}
+
 #cheshire {
   width: 250px;
   height: 250px;
-  top: 10000px;
   left: 15%;
   background: url(img/cheshiresprites.png) left center;
-  position: relative;
+  position: absolute;
   z-index: 10;
   animation: sprite 1s steps(11) infinite;
 }
@@ -237,6 +242,58 @@ body {
   height: 120px;
 }
 
+.t1 {
+  height: 1000px;
+  top: 2950px;
+  position: relative;
+}
+
+#teapot {
+  position: absolute;
+  left: 970px;
+  width: 140px;
+  height: 140px;
+}
+
+.t2 {
+  height: 1000px;
+  top: 2100px;
+  position: relative;
+}
+
+#teacup {
+  position: absolute;
+  left: 1050px;
+  width: 100px;
+  height: 100px;
+}
+
+.m1 {
+  height: 1000px;
+  top: 3900px;
+  position: relative;
+}
+
+#toast {
+  position: absolute;
+  left: 400px;
+  width: 120px;
+  height: 120px;
+}
+
+.m2 {
+  height: 1000px;
+  top: 2800px;
+  position: relative;
+}
+
+#marmalade {
+  position: absolute;
+  left: 200px;
+  width: 120px;
+  height: 120px;
+}
+
 h1 {
   font-size: 7em;
   color: #464646;
@@ -283,7 +340,7 @@ p {
   transition: 0.5s;
   position: relative;
   z-index: 30;
-  top: 6000px;
+  top: 2000px;
 }
 
 #p2.show {
@@ -295,11 +352,34 @@ p {
   transition: 0.5s;
   position: relative;
   z-index: 30;
-  top: 8000px;
+  top: 5000px;
 }
 
 #p3.show {
   opacity: 1;
+}
+
+#p4 {
+  opacity: 0;
+  transition: 0.5s;
+  position: relative;
+  z-index: 30;
+  top: 10000px;
+  background-color: #000000;
+}
+
+#p4.show {
+  opacity: 1;
+}
+
+#p5 {
+  transition: 0.5s;
+  position: absolute;
+  z-index: 30;
+  top: 32900px;
+  left: 15%;
+  margin: auto;
+  background-color: #000000;
 }
 
 @keyframes sprite {
