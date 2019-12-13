@@ -48,6 +48,10 @@ body {
   opacity: 1;
 }
 
+#alice.hide {
+  opacity: 0;
+}
+
 .scrolling #alice {
   animation: falling 1s steps(2) infinite;
 }
@@ -142,6 +146,97 @@ body {
   height: 160px;
 }
 
+.c {
+  height: 1000px;
+  top: 6000px;
+  position: relative;
+}
+
+#deck {
+  position: absolute;
+  left: 1000px;
+  width: 100px;
+  height: 100px;
+}
+
+.c1 {
+  height: 1000px;
+  top: 4990px;
+  position: relative;
+}
+
+#card1 {
+  position: absolute;
+  left: 1000px;
+  width: 100px;
+  height: 100px;
+}
+
+.c11 {
+  height: 1000px;
+  top: 3990px;
+  position: relative;
+}
+
+#card11 {
+  position: absolute;
+  left: 1000px;
+  width: 100px;
+  height: 100px;
+}
+
+.c2 {
+  height: 1000px;
+  top: 2900px;
+  position: relative;
+}
+
+#card2 {
+  position: absolute;
+  left: 900px;
+  width: 120px;
+  height: 120px;
+}
+
+.c3 {
+  height: 1000px;
+  top: 1850px;
+  position: relative;
+}
+
+#card3 {
+  position: absolute;
+  left: 1050px;
+  width: 120px;
+  height: 120px;
+}
+
+.c4 {
+  height: 1000px;
+  top: 800px;
+  position: relative;
+}
+
+#card4 {
+  position: absolute;
+  left: 950px;
+  width: 120px;
+  height: 120px;
+}
+
+.c5 {
+  height: 1000px;
+  top: -300px;
+  position: relative;
+}
+
+#card5 {
+  position: absolute;
+  left: 1050px;
+  width: 120px;
+  height: 120px;
+}
+
 h1 {
   font-size: 7em;
   color: #464646;
@@ -172,7 +267,7 @@ p {
   color: #464646;
 }
 
-#p1{
+#p1 {
   opacity: 0;
   transition: 0.5s;
   position: relative;
@@ -180,6 +275,30 @@ p {
 }
 
 #p1.show {
+  opacity: 1;
+}
+
+#p2 {
+  opacity: 0;
+  transition: 0.5s;
+  position: relative;
+  z-index: 30;
+  top: 6000px;
+}
+
+#p2.show {
+  opacity: 1;
+}
+
+#p3 {
+  opacity: 0;
+  transition: 0.5s;
+  position: relative;
+  z-index: 30;
+  top: 8000px;
+}
+
+#p3.show {
   opacity: 1;
 }
 
