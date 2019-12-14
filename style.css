@@ -2,9 +2,35 @@ body {
   padding: 20px;
   text-align: center;
   background: url('img/background.png');
-  height: 33000px;
   font-family: 'Milonga', cursive;
   font-size: 16px,
+}
+
+body.index {
+  height: 33000px;
+}
+
+nav {
+  position: relative;
+  top: -80px;
+}
+
+nav li {
+  display: inline;
+  font-size: 2em;
+  text-transform: uppercase;
+  padding: 0 30px;
+}
+
+nav a:link, nav a:visited {
+  color: #464646;
+  text-decoration: none;
+  border-bottom: 2px solid #464646;
+}
+
+nav a:hover {
+  color: purple;
+  border-bottom: 2px solid purple;
 }
 
 .vignette {
@@ -322,6 +348,13 @@ p {
   margin: auto;
   line-height: 1.5em;
   color: #464646;
+}
+
+p.about {
+  font-size: 1.8em;
+  text-align: left;
+  position: relative;
+  top: -30px;
 }
 
 #p1 {
